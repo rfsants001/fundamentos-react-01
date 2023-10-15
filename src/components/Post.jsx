@@ -1,3 +1,5 @@
+import Comment from "./Comment";
+import Avatar from "./Avatar";
 import styles from "./Post.module.css";
 
 export default function Post() {
@@ -5,19 +7,15 @@ export default function Post() {
     <article className={styles.post}>
       <header>
         <div className={styles.author}>
-          <img
-            className={styles.avatar}
-            src="https://github.com/rfsants001.png"
-          />
+          <Avatar src="https://github.com/rfsants001.png" />
           <div className={styles.authorInfo}>
             <strong>Rafa Devx</strong>
             <span>Web Developer</span>
           </div>
-
         </div>
-          <time title="01 de Outubro ás 08:30" dateTime="01-10-2023 08:30:00">
-            Publicado há 1 hora
-          </time>
+        <time title="01 de Outubro ás 08:30" dateTime="01-10-2023 08:30:00">
+          Publicado há 1 hora
+        </time>
       </header>
 
       <div className={styles.content}>
@@ -41,8 +39,16 @@ export default function Post() {
 
         <textarea placeholder="Deixe um comentário" />
 
-        <button type="submit">Comentar</button>
+        <footer>
+          <button type="submit">Publicar</button>
+        </footer>
       </form>
+
+      <div className={styles.commentList}>
+        <Comment />
+        <Comment />
+        <Comment />
+      </div>
     </article>
   );
 }

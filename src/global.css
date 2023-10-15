@@ -12,7 +12,12 @@
   --green-light: #00B37E;
   --green: #00875F;
 
-  --red-danger: #F75A68;
+  --red: #F75A68;
+}
+
+:focus {
+  outline: transparent;
+  box-shadow: 0 0 0 2px var(--green);
 }
 
 * {
